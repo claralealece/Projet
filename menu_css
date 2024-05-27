@@ -1,0 +1,93 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.header{
+    color: #3f6faa;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 100px;
+}
+
+.header h1 {
+    font-size: 45px;
+    color: #3f6faa;
+    text-align: center -10px;
+}
+.header img{
+    float: left;
+    width: auto;
+    height: auto;
+    margin: auto;
+    padding: auto;
+    }
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    background-color: #3f6faa;
+    padding: 10px 0;
+}
+
+.navigation button {
+    background-color: #c08266;
+    border-color: white;
+    border-radius: 8px;
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+}
+
+.navigation button:hover {
+    background-color: #3f6faa;
+    border-color: white;
+}
+
+.section {
+    flex: 1;
+    display: flex;
+    padding: 20px;
+    background-color: white;
+}
+
+.columns {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.left-column {
+    flex: 1;
+    padding: 10px;
+    background-color: #3f6faa;
+}
+.middle-column {
+    flex: 1;
+    padding: 10px;
+    background-color: #c08266;
+}
+.right-column {
+    flex: 1;
+    padding: 10px;
+    background-color: #3f6faa;
+}
+
+.bottom-band {
+    padding: 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.footer {
+    padding: 10px;
+    background-color: #3f6faa;
+    color: white;
+    text-align: center;
+}
