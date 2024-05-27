@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tout Parcourir - Agora Francia</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="toutparcourir.css">
+    
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1>Agora Francia</h1>
+            <img src="logo1.png" class="img">
+        </header>
+
+        <nav class="navigation">
+            <a href="test_menu.html" class="nav-button">Accueil</a>
+            <div class="dropdown">
+                <a href="#" class="nav-button">Tout Parcourir</a>
+                <div class="dropdown-content">
+                    <a href="tous_articles.html">Tous nos articles</a>
+                    <a href="articles-rares.html">Articles rares</a>
+                    <a href="articles_haut_de_gamme.html">Articles hauts de gamme</a>
+                    <a href="articles_reguliers.html">Articles réguliers</a>
+                </div>
+            </div>
+            <a href="#" class="nav-button">Notifications</a>
+            <a href="#" class="nav-button">Panier</a>
+            <a href="#" class="nav-button">Votre Compte</a>
+        </nav>
+        <section class="section browse-section">
+            <p></p>
+           
+    
+            <div class="centered-image">
+                <img src="image.jpg" alt="Description de l'image">
+                        
+            </div>
+            <div class="purchase-filter">
+                <label for="purchase-mode">Choisir vos types d'articles :</label>
+                <select id="purchase-mode">
+                    <option value="articles">Tous nos articles</option>
+                    <option value="articles-rares">Articles rares </option>
+                    <option value="articles-hautes-de-gamme"> Articles hautes de gammes </option>
+                    <option value="articles-reguliers"> Articles réguliers </option>
+                </select>
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            <p>Droits d'auteur | Copyright © 2024, Boutique d'antiquités, Athènes</p>
+        </footer>
+</body>
+</html>
