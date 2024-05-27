@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agora Francia - Accueil</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="carroussel.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+        	<img src="logo1.png" alt="Logo Agora">
+            <h1>Agora Francia</h1>
+            
+        </header>
+        <nav class="navigation">
+            <button>Accueil</button>
+            <button>Tout Parcourir</button>
+            <button>Notifications</button>
+            <button>Panier</button>
+            <button>Votre Compte</button>
+        </nav>
+
+        <section class="section">
+            <div class="columns">
+                <div class="left-column">
+                    <div id="carrousel1" class="carrousel">
+                        <div class="carrousel-header">Sélection du jour</div>
+                        <ul>
+                            <li class="active"><img src="france1.jpg" alt="Image 1" /></li>
+                            <li><img src="france2.jpg" alt="Image 2" /></li>
+                            <li><img src="france3.jpg" alt="Image 3" /></li>
+                            <li><img src="france4.jpg" alt="Image 4" /></li>
+                            <li><img src="france5.jpg" alt="Image 5" /></li>
+                            <li><img src="france6.jpg" alt="Image 6" /></li>
+                            <li><img src="france7.jpg" alt="Image 7" /></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="middle-column">
+                    <div id="carrousel2" class="carrousel">
+                        <div class="carrousel-header">Ventes flash</div>
+                        <ul>
+                            <li class="active"><img src="france1.jpg" alt="Image 1" /></li>
+                            <li><img src="france2.jpg" alt="Image 2" /></li>
+                            <li><img src="france3.jpg" alt="Image 3" /></li>
+                            <li><img src="france4.jpg" alt="Image 4" /></li>
+                            <li><img src="france5.jpg" alt="Image 5" /></li>
+                            <li><img src="france6.jpg" alt="Image 6" /></li>
+                            <li><img src="france7.jpg" alt="Image 7" /></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <div id="carrousel3" class="carrousel">
+                        <div class="carrousel-header">Best sellers</div>
+                        <ul>
+                            <li class="active"><img src="france1.jpg" alt="Image 1" /></li>
+                            <li><img src="france2.jpg" alt="Image 2" /></li>
+                            <li><img src="france3.jpg" alt="Image 3" /></li>
+                            <li><img src="france4.jpg" alt="Image 4" /></li>
+                            <li><img src="france5.jpg" alt="Image 5" /></li>
+                            <li><img src="france6.jpg" alt="Image 6" /></li>
+                            <li><img src="france7.jpg" alt="Image 7" /></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="bottom-band">
+                <p>Nous contacter : <a href="mailto:agoriafrancia@gmail.com">agoriafrancia@gmail.com</a></p>
+                <p>Nous appeler : +30260151664389</p>
+                <a href="https://www.google.com/maps/place/Agora+d'Athènes/@37.9857485,23.7033708,14.02z/data=!4m15!1m8!3m7!1s0x14a1bd1f067043f1:0x2736354576668ddd!2zQXRow6huZXMsIEdyw6hjZQ!3b1!8m2!3d37.9838096!4d23.7275388!16zL20vMG4yeg!3m5!1s0x14a1bd22f5097987:0x422934da31aa5dc8!8m2!3d37.974897!4d23.7220933!16zL20vMDJqcDBi?entry=ttu" target="_blank">
+                    <center><img src="maps.png" alt="Google Maps" width="100" height="100"></center>
+                </a>
+            </div>
+        <footer class="footer">
+            Droits d'auteur | Copyright © 2024, Boutique Antique, Athènes
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="carroussel.js"></script>
+</body>
+</html>
