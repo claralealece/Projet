@@ -4,8 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tout Parcourir - Agora Francia</title>
+
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="toutparcourir.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    
+    <script>
+    function scrollToSection() {
+        // Récupérer la section suivant celle de la navigation
+        var browseSection = document.querySelector('.section.browse-section');
+        var nextSection = browseSection.nextElementSibling;
+
+        // Scroll vers la section suivante après la section de navigation
+        if (nextSection) {
+            nextSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    function scrollToBottom() {
+        // Scroll vers le bas de la page
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    function showModal(id) {
+        document.getElementById(id).style.display = 'block';
+    }
+
+    function closeModal(id) {
+        document.getElementById(id).style.display = 'none';
+    }
+    </script>
+
+
     
 </head>
 <body>
@@ -20,9 +50,8 @@
             <div class="dropdown">
                 <a href="#" class="nav-button">Tout Parcourir</a>
                 <div class="dropdown-content">
-                    <a href="tous_articles.html">Tous nos articles</a>
                     <a href="articles-rares.html">Articles rares</a>
-                    <a href="articles_haut_de_gamme.html">Articles hauts de gamme</a>
+                    <a href="articles_haut_de_gamme.html">Articles haut de gamme</a>
                     <a href="articles_reguliers.html">Articles réguliers</a>
                 </div>
             </div>
@@ -30,28 +59,86 @@
             <a href="#" class="nav-button">Panier</a>
             <a href="#" class="nav-button">Votre Compte</a>
         </nav>
+        
         <section class="section browse-section">
-            <p></p>
-           
+            <p1> Bienvenue à tous chers collectionneurs !</p1>
+            <br><br>
+            <p> Laissez vous transporter dans le monde de la Grèce Antique, celui-ci vous réserve de nombreuses surprises...</p>
+
+            <br><br>
     
             <div class="centered-image">
                 <img src="image.jpg" alt="Description de l'image">
-                        
+                <button onclick="scrollToSection()">Tout découvrir</button>
             </div>
+
+            <br><br>
+
+            <p>Voici un exemple d'article que vous pouvez trouver dans chaque catégorie...</p>
+
+            <br><br><br>
+
+            <!-- Filtre pour le mode d'achat 
             <div class="purchase-filter">
                 <label for="purchase-mode">Choisir vos types d'articles :</label>
                 <select id="purchase-mode">
                     <option value="articles">Tous nos articles</option>
                     <option value="articles-rares">Articles rares </option>
-                    <option value="articles-hautes-de-gamme"> Articles hautes de gammes </option>
+                    <option value="articles-hauts-de-gamme"> Articles hautes de gammes </option>
                     <option value="articles-reguliers"> Articles réguliers </option>
                 </select>
+            </div> -->
+
+            <div class="gallery">
+
+                <br><br><br><br><br>
+                <figure>
+                    <a href="potion3.jpg" data-lightbox="gallery" data-title="Description de l'image 1"><img src="potion3.jpg" alt="Image 1" class="article-image"></a>
+                    <figcaption> Articles rares </figcaption>
+                    <button onclick="showModal('modal1')">En savoir plus</button>
+                    <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal1')">&times;</span>
+                            <h2> Articles rares </h2>
+                            <p> <br> Découvrez notre sélection d'articles rares ! </p>
+                        </div>
+                    </div>
+                </figure>
+
+                <figure>
+                    <a href="medusa.jpg" data-lightbox="gallery" data-title="Description de l'image 2"><img src="medusa.jpg" alt="Image 2" class="article-image"></a>
+                    <figcaption> Articles haut de gamme </figcaption>
+                    <button onclick="showModal('modal2')">En savoir plus</button>
+                    <div id="modal2" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal2')">&times;</span>
+                            <h2> Articles haut de gamme </h2>
+                            <p> <br> Découvrez notre sélection d'articles haut de gamme ! </p>
+                        </div>
+                    </div>
+                </figure>
+                <figure>
+                    <a href="harpe.jpg" data-lightbox="gallery" data-title="Description de l'image 3"><img src="harpe.jpg" alt="Image 3" class="article-image"></a>
+                    <figcaption> Articles réguliers </figcaption>
+                    <button onclick="showModal('modal3')">En savoir plus</button>
+                    <div id="modal3" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal3')">&times;</span>
+                            <h2> Articles réguliers </h2>
+                            <p> <br> Découvrez notre sélection d'articles réguliers !</p>
+                        </div>
+                    </div>
+                </figure>
             </div>
 
+            <p1> Bonne expérience ! </p1>
+
         </section>
+
 
         <footer class="footer">
             <p>Droits d'auteur | Copyright © 2024, Boutique d'antiquités, Athènes</p>
         </footer>
+    </div>
 </body>
 </html>
