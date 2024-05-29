@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agora Francia - Accueil</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="carroussel.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <img src="logo1.png" alt="Logo Agora">
+            <h1>Agora Francia</h1>
+        </header>
+        <nav class="navigation">
+            <button>Accueil</button>
+            <button>Tout Parcourir</button>
+            <button><a href="notification.html">Notifications</a></button>
+            <button>Panier</button>
+            <button>Votre Compte</button>
+        </nav>
+        <div class="container">
+            <h2>Configurer une alerte de recherche d'achat</h2>
+            <form id="searchForm" method="post" action="save_criteria.php">
+                <div class="form-group">
+                    <label for="item">Article:</label>
+                    <input type="text" id="item" name="item" placeholder="Nom de l'article" required>
+                </div>
+                <div class="form-group">
+                    <label for="category">Catégorie:</label>
+                    <select id="category" name="category" required>
+                        <option value="chaise">chaise</option>
+                        <option value="vase">vase</option>
+                        <option value="statue">statue</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="price">Prix maximum:</label>
+                    <input type="number" id="price" name="price" placeholder="Prix maximum en €" required>
+                </div>
+                <div class="form-group">
+                    <label for="condition">Type d'article:</label>
+                    <select id="condition" name="condition" required>
+                        <option value="regulier">Article regulier</option>
+                        <option value="rare">Article rare</option>
+                        <option value="haut de gamme">Article haut de gamme</option>
+                    </select>
+                </div>
+                <button type="submit">Activer l'alerte</button>
+            </form>
+        </div>
+        <footer class="footer">
+            Droits d'auteur | Copyright © 2024, Boutique Antique, Athènes
+        </footer>
+    </div>
+</body>
+</html>
