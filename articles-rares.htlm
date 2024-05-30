@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles Rares - Agora Francia</title>
+
+    <!-- Inclure le même fichier CSS -->
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="toutparcourir.css"> <!-- Réutiliser le même CSS -->
+
+    <script>
+        
+        function showModal(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+    </script>
+
+     
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1>Agora Francia</h1>
+            <img src="logo1.png" class="img">
+        </header>
+
+        <nav class="navigation">
+            <a href="test_menu.html" class="nav-button">Accueil</a>
+            <div class="dropdown">
+                <a href="toutparcourir.html" class="nav-button">Tout Parcourir</a>
+                <div class="dropdown-content">
+                    <a href="articles-rares.html">Articles rares</a>
+                    <a href="articles_haut_de_gamme.html">Articles haut de gamme</a>
+                    <a href="articles_reguliers.html">Articles réguliers</a>
+                </div>
+            </div>
+            <a href="#" class="nav-button">Notifications</a>
+            <a href="#" class="nav-button">Panier</a>
+            <a href="#" class="nav-button">Votre Compte</a>
+        </nav>
+        
+        <section class="section browse-section">
+            <p1> Ici vous découvrirez nos articles les plus rares ! </p1>
+
+            <p> <br> Attention ! Pour les potions il est ESSENTIEL de respecter les doses prescrites car les conséquences d'un usage excessif peuvent être imprévisibles et potentiellement dangereuses. Une utilisation inappropriée d'une de ces potions pourrait entraîner des effets plus qu'indésirables... </p>
+
+            <p1> <br> A vos risques et périls </p1>
+
+            <br><br><br>
+
+          <div class="purchase-filter">
+                 <label for="purchase-mode"> <br> Filtre par type d'achat : </label>
+                 <a href="meilleureoffre.html">Meilleure Offre</a>
+                 <a href="transaction.html">Transaction Vendeur-Client</a>
+                 <a href="achat.html">Achat immédiat</a>
+         </div>
+
+    
+
+            <!-- Galerie d'articles rares -->
+            <div class="gallery">
+                <figure>
+                    <a href="vasesoisson.jpg" data-lightbox="gallery" data-title="Description de l'article rare 1"><img src="vasesoisson.jpg" alt="Article rare 1"></a>
+                    <figcaption> Vase de Soissons </figcaption>
+                    <button onclick="showModal('modal1')">En savoir plus</button>
+                    <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal1')">&times;</span>
+                            <h2> Vase de Soissons </h2>
+                            <p> <br> Le spectaculaire Vase de Soissons : symbole de l'époque mérovingienne </p>
+                            <p> - 30 X 15 cm  </p>
+                            <p> - Vase en bronze </p>
+                            <p> - Vase précieux </p>
+                            <p> Ajoutez une touche d'élégance médiévale à votre collection ! </p> 
+
+                            <p> <strong> <br> Prix : 700 000 000 €  </strong> </p>
+                    </div>
+
+
+                    </div>
+                </figure>
+                <figure>
+                    <a href="potion1.jpg" data-lightbox="gallery" data-title="Description de l'article rare 2"><img src="potion1.jpg" alt="Article rare 2"></a>
+                    <figcaption> Pour avoir la beauté d'Aphrodite </figcaption>
+                    <button onclick="showModal('modal2')">En savoir plus</button>
+                    <div id="modal2" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal2')">&times;</span>
+                            <h2> Pour avoir la beauté d'Aphrodite </h2>
+                            <p> <br> Découvrez notre potion "Pour avoir la beauté d'Aphrodite" qui est inspirée de la déesse de la beauté et de l'amour. <br> - Mélange secret d'ingrédients naturels et de sortilèges sacrés <br> - Permet de raviver votre éclat et de sublimer votre apparence <br> - Flacon de 250 ml <br> Cette potion vous offre un voyage vers la splendeur divine. <br> Conseil d'utilisation : Mélanger 3 gouttes tous les matins et laissez la magie opérer... </p>
+
+                            <p> <strong> <br> Prix : 4000 €  </strong> </p>
+
+                         
+                        </div>
+                    </div>
+                </figure>
+
+                <figure>
+                    <a href="potion2.jpg" data-lightbox="gallery" data-title="Description de l'article rare 3"><img src="potion2.jpg" alt="Article rare 3"></a>
+                    <figcaption> Pour être rapide comme Hermès </figcaption>
+                    <button onclick="showModal('modal3')">En savoir plus</button>
+                    <div id="modal3" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal3')">&times;</span>
+                            <h2> Pour être rapide comme Hermès </h2>
+                            <p> <br> Adoptez la vitesse divine avec notre potion "Pour être rapide comme Hermès". <br> - inspirée par le messager des dieux <br> - Cette potion vous confère agilité et rapidité inégalées <br> - Composée à partir d'ingrédients secrets et de sortilèges sacrés <br> - Flacon de 250 ml <br> - Conseil d'utilisation : 1 goutte SEULEMENT par semaine <br> Intégrez cette potion à votre quotidien et ressentez la puissance d'Hermès! </p>
+
+                            <p> <strong> <br> Prix : 3005€  </strong> </p>
+
+                             
+                        </div>
+                    </div>
+                </figure>
+                
+                <figure>
+                    <a href="aphrodite.jpg" data-lightbox="gallery" data-title="Description de l'article rare 4"><img src="aphrodite.jpg" alt="Article rare 4"></a>
+                    <figcaption> Statue d'Aphrodite </figcaption>
+                    <button onclick="showModal('modal4')">En savoir plus</button>
+                    <div id="modal4" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal4')">&times;</span>
+                            <h2> Statue d'Aphrodite </h2>
+                            <p> <br>Découvrez la beauté intemporelle avec notre statue d'Aphrodite. <br> - Eégante représentation de la déesse de l'amour et de la beauté sculptée à la perfection <br> - 30 X 150 m <br> - Parfaite pour ajouter une touche d'élégance classique à votre collection <br> - Fabriquée en marbre blanc <br> Son emplacement doit être situé dans une pièce de 23 °C précisement  </p>
+
+                            <p> <strong> <br> Prix : 1 000 000 €  </strong> </p>
+
+                             
+                        </div>
+                    </div>
+                </figure>
+                
+                <figure>
+                    <a href="potion3.jpg" data-lightbox="gallery" data-title="Description de l'article rare 5"><img src="potion3.jpg" alt="Article rare 5"></a>
+                    <figcaption> La guérison d'Asclépios </figcaption>
+                    <button onclick="showModal('modal5')">En savoir plus</button>
+                    <div id="modal5" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal5')">&times;</span>
+                            <h2> La guérison d'Asclépios </h2>
+                            <p> <br> Découvrez le pouvoir de guérison avec notre potion inspirée d'Asclépios, le dieu grec de la médecine.<br> - Cette potion promet de revitaliser et de restaurer la santé <br> Flacon de 300 ml <br> - Conseil d'utilisation : 3 gouttes chaque jour à 12h pile (heure d'Athènes) <br> Laissez-vous séduire par cette potion divine, symbolisant la guérison et la renaissance. </p>
+
+                            <p> <strong> <br> Prix : 20 000 €  </strong> </p>
+
+                            
+
+
+                        </div>
+                    </div>
+                </figure>
+                
+
+                <figure>
+                    <a href="potionasterix.jpg" data-lightbox="gallery" data-title="Description de l'article rare 6"><img src="potionasterix.jpg" alt="Article rare 6"></a>
+                    <figcaption> La potion de Panoramix </figcaption>
+                    <button onclick="showModal('modal6')">En savoir plus</button>
+                    <div id="modal6" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal6')">&times;</span>
+                            <h2> La potion de Panoramix </h2>
+                            <p> <br> Immergez-vous dans la légende avec notre reproduction authentique de la potion de Panoramix. <br> - Potion emblématique qui permet de donner une force surhumaine et bien plus... <br> - Flacon en verre de 25 cm de hauteur <br> - Conseil d'utilisation : 6 gouttes avant de dormir <br> Emportez chez vous un morceau de la magie des Druides et laissez la puissance de cette potion opérer. </p>
+
+                            <p> <strong> <br> Prix : 500 000 €  </strong> </p>
+
+                            
+
+                            
+
+                        </div>
+                    </div>
+                </figure>
+                
+
+                <figure>
+                    <a href="potion86.jpg" data-lightbox="gallery" data-title="Description de l'article rare 7"><img src="potion86.jpg" alt="Article rare 7"></a>
+                    <figcaption> Pour être rapide comme Hermès </figcaption>
+                    <button onclick="showModal('modal7')">En savoir plus</button>
+                    <div id="modal7" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal7')">&times;</span>
+                            <h2> Pour être rapide comme Hermès </h2>
+                            <p> <br> Plongez dans la mythologie avec notre potion miraculeuse inspirée par la vitesse du Dieu grec Hermès <br> -Cette potion vous donne l'agilité et la rapidité d'un messager divin <br> - Flacon élégant de 50 ml <br> - Cette potion est idéale pour ceux qui recherchent une énergie instantanée <br> - Conseil d'utilisation : 1/2 goutte toutes les 24 heures <br> Emportez un peu de la magie de l'Olympe avec vous et surmontez tous les obstacles ! </p>
+
+                            <p> <strong> <br> Prix : 70 000 €  </strong> </p>
+
+                            
+                        </div>
+                    </div>
+                </figure>
+                
+
+                <figure>
+                    <a href="potion5.jpg" data-lightbox="gallery" data-title="Description de l'article rare 8"><img src="potion5.jpg" alt="Article rare 8"></a>
+                    <figcaption> Pour être puissant comme Zeus </figcaption>
+                    <button onclick="showModal('modal8')">En savoir plus</button>
+                    <div id="modal8" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal8')">&times;</span>
+                            <h2> Pour être puissant comme Zeus </h2>
+                            <p> <br> Plongez dans la puissance de l'Olympe avec notre potion inspirée par la force et la majesté du roi des dieux. <br> - Cette potion vous confère une puissance incomparable <br> - Flacon de 100 ml <br> - Cette potion est idéale pour ceux qui cherchent à dominer leur destinée <br> - Conseil d'utilisation : 1/12 goutte tous les jours à 5h05 du matin (heure d'Athène) <br> Vous pouvez affronter les défis avec confiance et devenir le maître de votre propre univers. </p>
+
+                            <p> <strong> <br> Prix : 800 000 €  </strong> </p>
+
+                            
+                        </div>
+                    </div>
+                </figure>
+                
+
+                <figure>
+                    <a href="apollon.jpg" data-lightbox="gallery" data-title="Description de l'article rare 9"><img src="apollon.jpg" alt="Article rare 9"></a>
+                    <figcaption> Statue d'Apollon </figcaption>
+                    <button onclick="showModal('modal9')">En savoir plus</button>
+                    <div id="modal9" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal9')">&times;</span>
+                            <h2> Statue d'Apollon </h2>
+                            <p> <br> Découvrez la majesté intemporelle avec notre statue d'Apollon, symbole de beauté, de lumière et de musique. <br> - Pièce captivante en marbre blanc de Carrare <br> - Incarne la grâce et l'harmonie. <br> - 1,5 mètre de hauteur <br> Cette statue éblouira votre espace de vie avec son aura divine. </p>
+
+                            <p> <strong> <br> Prix : 3 000 000 €  </strong> </p>
+
+                            
+                        </div>
+                    </div>
+                </figure>
+                
+
+                <figure>
+                    <a href="potion6.jpg" data-lightbox="gallery" data-title="Description de l'article rare 10"><img src="potion6.jpg" alt="Article rare 10"></a>
+                    <figcaption> Pour être fort comme Héraclès </figcaption>
+                    <button onclick="showModal('modal10')">En savoir plus</button>
+                    <div id="modal10" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal10')">&times;</span>
+                            <h2> Pour être fort comme Héraclès </h2>
+                            <p> <br> Découvrez notre potion "Hercule en bouteille". <br> - Potion légendaire <br> - Conçue pour vous donner la force inébranlable d'Héraclès lui-même <br> - Ressentez la puissance des dieux couler dans vos veines <br> - Conseil d'utilisation : 2 gouttes toutes les 48 heures <br> Préparez-vous à devenir aussi fort que le légendaire Héraclès avec notre potion exclusive. </p>
+
+                            <p> <strong> <br> Prix : 5000 €  </strong> </p>
+
+                            
+                        </div>
+                    </div>
+                </figure>
+                
+
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>Droits d'auteur | Copyright © 2024, Boutique d'antiquités, Athènes</p>
+        </footer>
+    </div>
+</body>
+</html>
