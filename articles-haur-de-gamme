@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles Rares - Agora Francia</title>
+
+    <!-- Inclure le même fichier CSS -->
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="toutparcourir.css"> <!-- Réutiliser le même CSS -->
+
+    <script>
+        
+        function showModal(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+    </script>
+
+     
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1>Agora Francia</h1>
+            <img src="logo1.png" class="img">
+        </header>
+
+        <nav class="navigation">
+            <a href="test_menu.html" class="nav-button">Accueil</a>
+            <div class="dropdown">
+                <a href="toutparcourir.html" class="nav-button">Tout Parcourir</a>
+                <div class="dropdown-content">
+                    <a href="articles-rares.html">Articles rares</a>
+                    <a href="articles_haut_de_gamme.html">Articles haut de gamme</a>
+                    <a href="articles_reguliers.html">Articles réguliers</a>
+                </div>
+            </div>
+            <a href="#" class="nav-button">Notifications</a>
+            <a href="#" class="nav-button">Panier</a>
+            <a href="#" class="nav-button">Votre Compte</a>
+        </nav>
+        
+        <section class="section browse-section">
+            <p1> Ici vous découvrirez nos articles haut de gammes ! </p1>
+
+            <br><br>
+
+            <div class="purchase-filter">
+                 <label for="purchase-mode"> <br> Filtre par type d'achat : </label>
+                 <a href="meilleureoffre1.html">Meilleure Offre</a>
+                 <a href="transaction1.html">Transaction Vendeur-Client</a>
+                 <a href="achat1.html">Achat immédiat</a>
+         </div>
+    
+            <div class="gallery">
+                <figure>
+                    <a href="athena.jpg" data-lightbox="gallery" data-title=" 1"><img src="athena.jpg" alt="Article rare 1"></a>
+                    <figcaption> Statue d'Athena </figcaption>
+                    <button onclick="showModal('modal1')">En savoir plus</button>
+                    <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal1')">&times;</span>
+                            <h2> Statue d'Athena </h2>
+                            <p> <br> - Dimension : 18 m de hauteur <br> - Athéna, déesse de la sagesse et de la guerre, est représentée ici dans toute sa majesté, elle incarne la force et la protection. </p>
+
+                            <p> <strong> <br> Prix : 7000 €  </strong> </p>
+
+                        </div>
+                    </div>
+                </figure>
+                <figure>
+                    <a href="zeus.jpg" data-lightbox="gallery" data-title=" 2"><img src="zeus.jpg" alt="Article rare 2"></a>
+                    <figcaption> Statue de Zeus </figcaption>
+                    <button onclick="showModal('modal2')">En savoir plus</button>
+                    <div id="modal2" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal2')">&times;</span>
+                            <h2> Statue de Zeus </h2>
+                            <p> <br> Dimension : 20 m de hauteur <br> - Zeus, le roi des dieux, règne majestueusement depuis le sommet de l'Olympe. Il symbolise la puissance et l'autorité, sa foudre fait trembler même les plus grands héros.</p>
+
+                            <p> <strong> <br> Prix : 100 000 €  </strong> </p>
+
+                            
+                        </div>
+                    </div>
+                </figure>
+                
+                <figure>
+                    <a href="arthemis.jpg" data-lightbox="gallery" data-title="3"><img src="arthemis.jpg" alt=" 3"></a>
+                    <figcaption> Statue d'Arthémis  </figcaption>
+                    <button onclick="showModal('modal3')">En savoir plus</button>
+                    <div id="modal3" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal3')">&times;</span>
+                            <h2> Statue d'Arthémis </h2>
+                            <p> <br> Dimension : 1 m de hauteur <br> - Artémis, la déesse de la chasse et de la nature sauvage. Elle incarne la pureté et la puissance féminine, protégeant les animaux et veillant sur les forêts vierges. </p>
+
+                            <p> <strong> <br> Prix : 80 000 €  </strong> </p>
+
+                            
+                        </div>
+                    </div>
+                </figure>
+
+                <figure>
+                    <a href="hades.jpg" data-lightbox="gallery" data-title="4"><img src="hades.jpg" alt="4"></a>
+                    <figcaption> Statue d'Hades </figcaption>
+                    <button onclick="showModal('modal4')">En savoir plus</button>
+                    <div id="modal4" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal4')">&times;</span>
+                            <h2>Statue d'Hades</h2>
+                            <p> <br> Dimension : 2 m de hauteur <br> - Hadès, le sombre souverain des Enfers, entouré des ombres éthérées des défunts. Son regard froid et impénétrable exprime la puissance implacable de celui qui règne sur le royaume des morts. </p>
+
+                            <p> <strong> <br> Prix : 60 000 €  </strong> </p>
+
+                            
+                        </div>
+                    </div>
+                </figure>
+
+                <figure>
+                    <a href="poseidon.jpg" data-lightbox="gallery" data-title="5"><img src="poseidon.jpg" alt="5"></a>
+                    <figcaption>Statue de Poséidon</figcaption>
+                    <button onclick="showModal('modal5')">En savoir plus</button>
+                    <div id="modal5" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal5')">&times;</span>
+                            <h2> Statue de Poséidon </h2>
+                            <p> <br> Dimension : 0,5 m de hauteur <br> - Poséidon, le dieu des mers et des océans. Sa silhouette imposante évoque la puissance des tempêtes et des vagues déferlantes. </p>
+
+                            <p> <strong> <br> Prix : 3000 €  </strong> </p>
+
+                            
+                        </div>
+                    </div>
+                </figure>
+
+                <figure>
+                    <a href="demeter.jpg" data-lightbox="gallery" data-title="6"><img src="demeter.jpg" alt="6"></a>
+                    <figcaption>Statue de Deméter</figcaption>
+                    <button onclick="showModal('modal6')">En savoir plus</button>
+                    <div id="modal6" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal6')">&times;</span>
+                            <h2> Statue de Deméter </h2>
+                            <p> <br> Dimension : 30 cm de hauteur <br> - Déméter, déesse de l'agriculture et de la fertilité. Son visage bienveillant évoque la générosité de la nature. </p>
+
+                            <p> <strong> <br> Prix : 7500 €  </strong> </p>
+
+                            
+                        </div>
+                    </div>
+                </figure>
+
+                <figure>
+                    <a href="hermes.jpg" data-lightbox="gallery" data-title="7"><img src="hermes.jpg" alt="7"></a>
+                    <figcaption>Statue d'Hermès</figcaption>
+                    <button onclick="showModal('modal7')">En savoir plus</button>
+                    <div id="modal7" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal7')">&times;</span>
+                            <h2> Statue d'Hermès </h2>
+                            <p> <br> Dimension : 45 cm de hauteur <br> - Hermès, le messager des dieux et le protecteur des voyageurs. Son regard vif et alerte reflète son intelligence et sa vivacité d'esprit.</p>
+
+                            <p> <strong> <br> Prix : 70 000 €  </strong> </p>
+
+                            
+                        </div>
+                    </div>
+                </figure>
+
+                <figure>
+                    <a href="hera.jpg" data-lightbox="gallery" data-title="8"><img src="hera.jpg" alt="8"></a>
+                    <figcaption> Statue d'Hera </figcaption>
+                    <button onclick="showModal('modal8')">En savoir plus</button>
+                    <div id="modal8" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal8')">&times;</span>
+                            <h2> Statue d'Hera </h2>
+                            <p> <br> Dimension : 10 m de hauteur <br> - Héra, la reine des dieux et déesse du mariage. Elle irradie une aura de puissance et de dignité.</p>
+
+                            <p> <strong> <br> Prix : 5000 €  </strong> </p>
+
+                            
+                        </div>
+                    </div>
+                </figure>
+
+                <figure>
+                    <a href="medusa.jpg" data-lightbox="gallery" data-title="9"><img src="medusa.jpg" alt="9"></a>
+                    <figcaption>Statue de Médusa</figcaption>
+                    <button onclick="showModal('modal9')">En savoir plus</button>
+                    <div id="modal9" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal9')">&times;</span>
+                            <h2> Statue de Médusa </h2>
+                            <p> <br> Dimension : 25 cm de hauteur <br> - Son regard pétrifiant et ses serpents venimeux pour chevelure, incarne la terreur et la puissance du monde mythique.</p>
+
+                            <p> <strong> <br> Prix : 7000 €  </strong> </p>
+
+                            
+                        </div>
+                    </div>
+                </figure>
+
+                <figure>
+                    <a href="ares.jpg" data-lightbox="gallery" data-title="10"><img src="ares.jpg" alt="10"></a>
+                    <figcaption>Statue d'Arès</figcaption>
+                    <button onclick="showModal('modal10')">En savoir plus</button>
+                    <div id="modal10" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal10')">&times;</span>
+                            <h2> Statue d'Arès </h2>
+                            <p> <br> Dimension : 37 cm de hauteur <br> - Arès, le redoutable dieu de la guerre.</p>
+
+                            <p> <strong> <br> Prix : 1200 €  </strong> </p>
+
+                            
+                    </div>
+                        </div>
+                    </div>
+                </figure>
+
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>Droits d'auteur | Copyright © 2024, Boutique d'antiquités, Athènes</p>
+        </footer>
+    </div>
+</body>
+</html>
