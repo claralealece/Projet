@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="toutparcourir.css">
+    <link rel="stylesheet" href="carroussel.css">
+    <title>Recherche d'Articles</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-left">
+                <img src="logo1.png" alt="Logo Agora">
+            </div>
+            <div class="header-center">
+                <h1>Agora Francia</h1>
+            </div>
+            <div class="header-right">
+                <div class="user-info">
+                    <?php
+                    if (isset($_SESSION['username'])) {
+                        echo "Connecté en tant que: " . htmlspecialchars($_SESSION['username']);
+                    }
+                    ?>
+                </div>
+            </div>
+        </header>
+
+        <nav class="navigation">
+            <button><a href="index.php">Accueil</a></button>
+            <button>
+                <div class="dropdown">
+                    <a href="toutparcourir.php">Tout Parcourir</a>
+                    <div class="dropdown-content">
+                        <a href="articles_rares.php">Articles rares</a>
+                        <a href="articles_haut.php">Articles haut de gamme</a>
+                        <a href="articles_reguliers.php">Articles réguliers</a>
+                    </div>
+                </div>
+                </button>
+            <button><a href="accueil_notif.html">Notifications</a></button>
+            <button><a href="panier.php">Panier</a></button>
+            <button><a href="moncompte.php">Votre Compte</a></button>
+        </nav>
+    <center><div class="carrousel-header"><h1>Recherche d'Articles</h1></div>
+    <section><form action="recherche.php" method="post">
+        <label for="nom">Nom de l'article:</label>
+        <input type="text" id="nom" name="nom"><br><br>
+
+        <label for="type_article">Type d'article:</label>
+        <select id="type_article" name="type_article">
+            <option value="statue">Statue</option>
+            <option value="vase">Vase</option>
+            <option value="potion">Potion</option>
+            <option value="divers">Divers</option>
+        </select><br><br>
+
+        <label for="rarete">Rareté:</label>
+        <select id="rarete" name="rarete">
+            <option value="regulier">Régulier</option>
+            <option value="rare">Rare</option>
+            <option value="haut">Haut de gamme</option>
+        </select><br><br>
+
+        <label for="type_vente">Type de vente:</label>
+        <select id="type_vente" name="type_vente">
+            <option value="achat_immediat">Immédite</option>
+            <option value="enchère">Enchères</option>
+            <option value="offre">Faire une offre</option>
+        </select><br><br>
+
+        <label for="prix_max">Prix maximum:</label>
+        <input type="number" id="prix_max" name="prix_max" step="1"><br><br>
+
+        <input type="submit" value="Rechercher">
+    </form></section>
+</section>
+    <footer class="footer">
+            <p>Droits d'auteur | Copyright © 2024, Boutique d'antiquités, Athènes</p>
+        </footer>
+</body>
+</html>
