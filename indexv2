@@ -1,0 +1,141 @@
+<?php
+session_start();
+include 'db.php';
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agora Francia - Accueil</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="carroussel.css">
+    <link rel="stylesheet" href="toutparcourir.css">
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="carroussel.js"></script>
+    <div class="wrapper">
+        <header class="header">
+                <img src="logo1.png" alt="Logo Agora">
+                <h1>Agora Francia</h1>
+                <div class="user-info">
+                    <?php
+                    if (isset($_SESSION['username'])) {
+                        echo "Connecté en tant que: " . htmlspecialchars($_SESSION['username']);
+                    }
+                    ?>
+                </div>
+        </header>
+
+        <nav class="navigation">
+            <button><a href="index.php">Accueil</a></button>
+            <button>
+                <div class="dropdown">
+                    <a href="toutparcourir.php">Tout Parcourir</a>
+                    <div class="dropdown-content">
+                        <a href="articles_rares.php">Articles rares</a>
+                        <a href="articles_haut.php">Articles haut de gamme</a>
+                        <a href="articles_reguliers.php">Articles réguliers</a>
+                    </div>
+                </div>
+            </button>
+            <button><a href="accueil_notif.html">Notifications</a></button>
+            <button><a href="panier.php">Panier</a></button>
+            <button><a href="compte.php">Mon compte</a></button>
+            <?php
+            if (isset($_SESSION['username'])) {
+                if ($_SESSION['type'] === 'administrateur') {
+                    echo '<button><a href="admin_page.php">Page Admin</a></button>';
+                } elseif ($_SESSION['type'] === 'vendeur') {
+                    echo '<button><a href="vendeur_page.php">Page Vendeur</a></button>';
+                } elseif ($_SESSION['type'] === 'acheteur') {
+                    echo '<button><a href="welcome.php">Mes informations</a></button>';
+            }
+        }
+            ?>            
+            <?php
+            if (isset($_SESSION['username'])) {
+                if ($_SESSION['type'] === 'administrateur') {
+                    echo '<button><a href="admin_page.php">Page Admin</a></button>';
+                } elseif ($_SESSION['type'] === 'vendeur') {
+                    echo '<button><a href="vendeur_page.php">Page Vendeur</a></button>';
+                }
+                echo '<button><a href="logout.php">Se déconnecter</a></button>';
+            }
+            ?>
+        </nav>
+        <center><p>Bienvenue chez Agoria Francia, le site n°1 d'achat et revente d'objets antiques et authentiques</p>
+            <p>Vous trouverez ici statues, potions ou encore objets divers...</p>
+            <p>Cherchez la perle rare, enchérissez ou négociez avec les vendeurs !</p></center>
+        <section class="section">
+            <div class="columns">
+                <div class="left-column">
+                    <div id="carrousel1" class="carrousel">
+                        <B><center><div class="carrousel-header"><h2>Sélection du jour</h2></div></center></B>
+                        <ul>
+                            <?php
+                            $sql = "SELECT photo_url FROM articles";
+                            $result = $conn->query($sql);
+
+                            $images = [];
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    $images[] = $row['photo_url'];
+                                }
+                            }
+
+                            shuffle($images);
+
+                            foreach ($images as $image) {
+                                echo "<li><img src='$image' alt='Image' /></li>";
+                            }
+                            ?>
+                        </ul>
+                    </div>
+                </div>
+                <div class="middle-column">
+                    <div id="carrousel2" class="carrousel">
+                        <B><center><div class="carrousel-header"><h2>Ventes flash</h2></div></center></B>
+                        <ul>
+                            <?php
+                            shuffle($images);
+
+                            foreach ($images as $image) {
+                                echo "<li><img src='$image' alt='Image' /></li>";
+                            }
+                            ?>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <div id="carrousel3" class="carrousel">
+                        <B><center><div class="carrousel-header"><h2>Best sellers</h2></div></center></B>
+                        <ul>
+                            <?php
+                            shuffle($images);
+
+                            foreach ($images as $image) {
+                                echo "<li><img src='$image' alt='Image' /></li>";
+                            }
+                            ?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="bottom-band">
+            <p>Nous contacter : <a href="mailto:agoriafrancia@gmail.com">agoriafrancia@gmail.com</a></p>
+            <p>Nous appeler : +30260151664389</p>
+            <a href="https://www.google.com/maps/place/Agora+d'Athènes/@37.9857485,23.7033708,14.02z/data=!4m15!1m8!3m7!1s0x14a1bd1f067043f1:0x2736354576668ddd!2zQXRow6huZXMsIEdyw6hjZQ!3b1!8m2!3d37.9838096!4d23.7275388!16zL20vMG4yeg!3m5!1s0x14a1bd22f5097987:0x422934da31aa5dc8!8m2!3d37.974897!4d23.7220933!16zL20vMDJqcDBi?entry=ttu" target="_blank">
+                <center><img src="maps.jpg" alt="Google Maps" width="100" height="100"></center>
+            </a>
+        </div>       
+        <footer class="footer">
+            <p>Droits d'auteur | Copyright © 2024, Boutique Antique, Athènes</p>
+        </footer>
+    </div>
+</body>
+</html>
